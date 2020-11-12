@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>模块文档 | Hexo</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="模块文档 | Hexo">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="模块接入指南maven 配置在系统环境变量里添加12345MAVEN_URL http:&#x2F;&#x2F;140.143.60.230&#x2F;repository&#x2F;maven-releases&#x2F;MAVEN_USERNAME msMAVEN_PASSWORD ms2020  Android Studio 项目级别的build.gradle中添加仓库地址1234567bu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模块文档">
+<meta property="og:url" content="http://example.com/2020/11/12/%E6%A8%A1%E5%9D%97%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="模块接入指南maven 配置在系统环境变量里添加12345MAVEN_URL http:&#x2F;&#x2F;140.143.60.230&#x2F;repository&#x2F;maven-releases&#x2F;MAVEN_USERNAME msMAVEN_PASSWORD ms2020  Android Studio 项目级别的build.gradle中添加仓库地址1234567bu">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-12T09:05:26.103Z">
+<meta property="article:modified_time" content="2020-11-12T10:19:24.492Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.1.0" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.1.0" rel="stylesheet">
+
+<link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
+
+<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="/js/titleTip.js?v=1.1.0" ></script>
+
+<script src="//cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.1.0" ></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="">
+  <input class="theme_blog_path" value="">
+  <input id="theme_shortcut" value="true" />
+  <input id="theme_highlight_on" value="true" />
+  <input id="theme_code_copy" value="true" />
+</div>
+
+
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>John Doe</span>
+</div>
+
+<div class="icon">
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active" data-rel="All">All<small>(24)</small></div></li>
+    
+        
+            
+            <li><div data-rel="工具类">工具类<small>(8)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="开发环境配置">开发环境配置<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="框架">框架<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="配置模块">配置模块<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="权限">权限<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="日志">日志<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="数据">数据<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="数据存储">数据存储<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="网络">网络<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="微信清理">微信清理<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="依赖">依赖<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="24">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        Links
+        <i class="iconfont icon-left"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <div class="right-top">
+        <div id="default-panel">
+            <i class="iconfont icon-search" data-title="搜索 快捷键 i"></i>
+            <div class="right-title">All</div>
+            <i class="iconfont icon-file-tree" data-title="切换到大纲视图 快捷键 w"></i>
+        </div>
+        <div id="search-panel">
+            <i class="iconfont icon-left" data-title="返回"></i>
+            <input id="local-search-input" />
+            <label class="border-line" for="input"></label>
+            <i class="iconfont icon-case-sensitive" data-title="大小写敏感"></i>
+            <i class="iconfont icon-tag" data-title="标签"></i>
+        </div>
+        <div id="outline-panel" style="display: none">
+            <div class="right-title">大纲</div>
+            <i class="iconfont icon-list" data-title="切换到文章列表"></i>
+        </div>
+    </div>
+
+    <div class="tags-list">
+    <input id="tag-search" />
+    <div class="tag-wrapper">
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>工具类</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>开发环境配置</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>框架</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>配置模块</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>权限</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>日志</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>数据存储</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>网络</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>微信清理</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>依赖</a>
+            </li>
+        
+    </div>
+
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="All "
+           href="/2020/11/12/%E6%A8%A1%E5%9D%97%E6%96%87%E6%A1%A3/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="模块文档">模块文档</span>
+            <span class="post-date" title="2020-11-12 17:05:26">2020/11/12</span>
+        </a>
+        
+        <a  class="All 依赖 "
+           href="/2020/10/06/%E4%BE%9D%E8%B5%96/%E4%BE%9D%E8%B5%96%E8%AF%B4%E6%98%8E/"
+           data-tag="依赖"
+           data-author="" >
+            <span class="post-title" title="依赖说明">依赖说明</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 依赖 "
+           href="/2020/10/06/%E4%BE%9D%E8%B5%96/%E5%A4%96%E9%83%A8%E4%BE%9D%E8%B5%96%E7%BB%9F%E4%B8%80%E7%89%88%E6%9C%AC/"
+           data-tag="依赖"
+           data-author="" >
+            <span class="post-title" title="外部依赖统一版本">外部依赖统一版本</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 开发环境配置 "
+           href="/2020/10/06/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E4%BE%9D%E8%B5%96%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE/"
+           data-tag="开发环境配置"
+           data-author="" >
+            <span class="post-title" title="maven 配置">maven 配置</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 开发环境配置 "
+           href="/2020/10/06/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"
+           data-tag="开发环境配置"
+           data-author="" >
+            <span class="post-title" title="模块开发配置">模块开发配置</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 框架 "
+           href="/2020/10/06/%E6%A1%86%E6%9E%B6/%E6%A8%A1%E5%9D%97Framework/"
+           data-tag="框架"
+           data-author="" >
+            <span class="post-title" title="模块Framework">模块Framework</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 日志 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97/"
+           data-tag="日志"
+           data-author="" >
+            <span class="post-title" title="日志模块">日志模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 配置模块 "
+           href="/2020/10/06/%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97/%E5%BC%80%E5%85%B3%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9D%97/"
+           data-tag="配置模块"
+           data-author="" >
+            <span class="post-title" title="开发控制">开发控制</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 权限 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7%E6%A8%A1%E5%9D%97/"
+           data-tag="权限"
+           data-author="" >
+            <span class="post-title" title="权限申请模块">权限申请模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 配置模块 "
+           href="/2020/10/06/%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97/"
+           data-tag="配置模块"
+           data-author="" >
+            <span class="post-title" title="网络请求配置模块">网络请求配置模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/APK%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="APK工具类">APK工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/File%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="File工具类">File工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/Gson%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="Gson工具类">Gson工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/Toast%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="Toast工具类">Toast工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E8%B5%84%E6%BA%90%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="反射获取资源工具类">反射获取资源工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/%E7%B3%BB%E7%BB%9F%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="系统工具类">系统工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%B7%A5%E5%85%B7%E7%B1%BB/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="线程池工具类">线程池工具类</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 工具类 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97/"
+           data-tag="工具类"
+           data-author="" >
+            <span class="post-title" title="工具类模块">工具类模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 微信清理 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E5%BE%AE%E4%BF%A1%E6%B8%85%E7%90%86%E6%A8%A1%E5%9D%97/%E5%BE%AE%E4%BF%A1%E6%B8%85%E7%90%86%E6%A8%A1%E5%9D%97/"
+           data-tag="微信清理"
+           data-author="" >
+            <span class="post-title" title="微信清理模块">微信清理模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 数据 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97/"
+           data-tag="数据"
+           data-author="" >
+            <span class="post-title" title="数据模块">数据模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 数据存储 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/MMKV%E6%A8%A1%E5%9D%97/"
+           data-tag="数据存储"
+           data-author="" >
+            <span class="post-title" title="MMKV模块">MMKV模块</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 数据存储 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/persistence/"
+           data-tag="数据存储"
+           data-author="" >
+            <span class="post-title" title="SharedPreferences 存储">SharedPreferences 存储</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 网络 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97httpurlconnection%E5%AE%9E%E7%8E%B0/"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="httpurlconnection实现">httpurlconnection实现</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <a  class="All 网络 "
+           href="/2020/10/06/%E6%A8%A1%E5%9D%97/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97okhttp%E5%AE%9E%E7%8E%B0/"
+           data-tag="网络"
+           data-author="" >
+            <span class="post-title" title="网络请求模块实现okhttp">网络请求模块实现okhttp</span>
+            <span class="post-date" title="2020-10-06 22:10:50">2020/10/06</span>
+        </a>
+        
+        <div id="no-item-tips">
+
+        </div>
+    </nav>
+    <div id="outline-list">
+    </div>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle" data-title="切换全屏 快捷键 s">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div id="post">
+    <div class="pjax">
+        <article id="post-模块文档" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">模块文档</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        
+    </div>
+    <div class="article-meta">
+        
+            Created At : <time class="date" title='Updated At: 2020-11-12 18:19:24'>2020-11-12 17:05</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            Views 👀 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97"><span class="toc-text">模块接入指南</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#maven-%E9%85%8D%E7%BD%AE"><span class="toc-text">maven 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%A8%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%87%8C%E6%B7%BB%E5%8A%A0"><span class="toc-text">在系统环境变量里添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-Studio-%E9%A1%B9%E7%9B%AE%E7%BA%A7%E5%88%AB%E7%9A%84build-gradle%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-text">Android Studio 项目级别的build.gradle中添加仓库地址</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E4%BE%9D%E8%B5%96%E7%BB%9F%E4%B8%80%E4%BD%BF%E7%94%A8%E7%89%88%E6%9C%AC"><span class="toc-text">外部依赖统一使用版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E4%BE%9D%E8%B5%96"><span class="toc-text">模块依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97%E5%85%A5%E5%8F%A3"><span class="toc-text">模块入口</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%B1%BB"><span class="toc-text">客户端类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%A8%A1%E5%9D%97"><span class="toc-text">获取模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%80%E5%85%B3%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9D%97"><span class="toc-text">开关控制模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97"><span class="toc-text">日志模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#api-%E6%A8%A1%E5%9D%97"><span class="toc-text">api 模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97"><span class="toc-text">工具类模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97"><span class="toc-text">数据模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7%E6%A8%A1%E5%9D%97"><span class="toc-text">权限申请模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97"><span class="toc-text">网络请求模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-text">异常处理模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#mmkv"><span class="toc-text">mmkv</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sp"><span class="toc-text">sp</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#common"><span class="toc-text">common</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97"><span class="toc-text">网络请求配置模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%97%A5%E5%BF%97"><span class="toc-text">阿里云日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91sts"><span class="toc-text">阿里云sts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%85%BE%E8%AE%AFbugly"><span class="toc-text">腾讯bugly</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95"><span class="toc-text">三方登录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E6%96%B9%E6%94%AF%E4%BB%98"><span class="toc-text">三方支付</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E6%B8%85%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-text">微信清理模块</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%85%B3%E6%8E%A7%E5%88%B6%E6%A8%A1%E5%9D%97-1"><span class="toc-text">开关控制模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E6%A8%A1%E5%9D%97-1"><span class="toc-text">日志模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#api-%E6%A8%A1%E5%9D%97-1"><span class="toc-text">api 模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%A8%A1%E5%9D%97-1"><span class="toc-text">工具类模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ApkUtils"><span class="toc-text">ApkUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ToastUtils"><span class="toc-text">ToastUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#EncryptionUtils"><span class="toc-text">EncryptionUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ThreadPoolUtils"><span class="toc-text">ThreadPoolUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#GsonUtils"><span class="toc-text">GsonUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NetWorkUtils"><span class="toc-text">NetWorkUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RegexUtils"><span class="toc-text">RegexUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ResUtils"><span class="toc-text">ResUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SystemUtils"><span class="toc-text">SystemUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PinyinUtils"><span class="toc-text">PinyinUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AndroidOpenFileUtils"><span class="toc-text">AndroidOpenFileUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AndroidShareFileUtils"><span class="toc-text">AndroidShareFileUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ByteSizeToStringUnitUtils"><span class="toc-text">ByteSizeToStringUnitUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AndroidPhotoAlbumUtils"><span class="toc-text">AndroidPhotoAlbumUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FileUtils"><span class="toc-text">FileUtils</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MediaPlayerUtils"><span class="toc-text">MediaPlayerUtils</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9D%97-1"><span class="toc-text">数据模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AppData"><span class="toc-text">AppData</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UserData"><span class="toc-text">UserData</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AdData"><span class="toc-text">AdData</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IntegralData"><span class="toc-text">IntegralData</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MtaData"><span class="toc-text">MtaData</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%83%E9%99%90%E7%94%B3%E8%AF%B7%E6%A8%A1%E5%9D%97-1"><span class="toc-text">权限申请模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E6%A8%A1%E5%9D%97-1"><span class="toc-text">网络请求模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97-1"><span class="toc-text">异常处理模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mmkv-1"><span class="toc-text">mmkv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sp-1"><span class="toc-text">sp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#common-1"><span class="toc-text">common</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82%E9%85%8D%E7%BD%AE%E6%A8%A1%E5%9D%97-1"><span class="toc-text">网络请求配置模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%97%A5%E5%BF%97-1"><span class="toc-text">阿里云日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91sts-1"><span class="toc-text">阿里云sts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%85%BE%E8%AE%AFbugly-1"><span class="toc-text">腾讯bugly</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E6%96%B9%E7%99%BB%E5%BD%95-1"><span class="toc-text">三方登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E6%96%B9%E6%94%AF%E4%BB%98-1"><span class="toc-text">三方支付</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BE%AE%E4%BF%A1%E6%B8%85%E7%90%86%E6%A8%A1%E5%9D%97-1"><span class="toc-text">微信清理模块</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="模块接入指南"><a href="#模块接入指南" class="headerlink" title="模块接入指南"></a>模块接入指南</h1><h2 id="maven-配置"><a href="#maven-配置" class="headerlink" title="maven 配置"></a>maven 配置</h2><h3 id="在系统环境变量里添加"><a href="#在系统环境变量里添加" class="headerlink" title="在系统环境变量里添加"></a>在系统环境变量里添加</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MAVEN_URL http:&#x2F;&#x2F;140.143.60.230&#x2F;repository&#x2F;maven-releases&#x2F;</span><br><span class="line"></span><br><span class="line">MAVEN_USERNAME ms</span><br><span class="line"></span><br><span class="line">MAVEN_PASSWORD ms2020</span><br></pre></td></tr></table></figure>
+
+<h3 id="Android-Studio-项目级别的build-gradle中添加仓库地址"><a href="#Android-Studio-项目级别的build-gradle中添加仓库地址" class="headerlink" title="Android Studio 项目级别的build.gradle中添加仓库地址"></a>Android Studio 项目级别的build.gradle中添加仓库地址</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;</span><br><span class="line">    repositories &#123;</span><br><span class="line">        maven &#123;</span><br><span class="line">            url(System.getenv(&quot;MAVEN_URL&quot;))</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="外部依赖统一使用版本"><a href="#外部依赖统一使用版本" class="headerlink" title="外部依赖统一使用版本"></a>外部依赖统一使用版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; okhttp</span><br><span class="line">   implementation group: &#39;com.squareup.okhttp3&#39;, name: &#39;okhttp&#39;, version: &#39;4.9.0&#39;</span><br><span class="line">   &#x2F;&#x2F; okhttp 日志拦截器</span><br><span class="line">   implementation &#39;com.squareup.okhttp3:logging-interceptor:4.9.0&#39;</span><br><span class="line">   &#x2F;&#x2F; gson</span><br><span class="line">   implementation group: &#39;com.google.code.gson&#39;, name: &#39;gson&#39;, version: &#39;2.8.6&#39;</span><br><span class="line">   &#x2F;&#x2F; rxjava</span><br><span class="line">   implementation group: &#39;io.reactivex.rxjava2&#39;, name: &#39;rxjava&#39;, version: &#39;2.1.2&#39;</span><br><span class="line">   &#x2F;&#x2F; rxandroid</span><br><span class="line">   implementation group: &#39;io.reactivex.rxjava2&#39;, name: &#39;rxandroid&#39;, version: &#39;2.0.2&#39;</span><br><span class="line">   &#x2F;&#x2F; retrofit</span><br><span class="line">   implementation group: &#39;com.squareup.retrofit2&#39;, name: &#39;retrofit&#39;, version: &#39;2.4.0&#39;</span><br><span class="line">   &#x2F;&#x2F; retrofit gson 适配器</span><br><span class="line">   implementation &#39;com.squareup.retrofit2:converter-gson:2.4.0&#39;</span><br><span class="line">   &#x2F;&#x2F; retrofit rxjava 适配器</span><br><span class="line">   implementation group: &#39;com.squareup.retrofit2&#39;, name: &#39;adapter-rxjava2&#39;, version: &#39;2.5.0&#39;</span><br><span class="line">   &#x2F;&#x2F; mmkv</span><br><span class="line">   implementation &#39;com.tencent:mmkv-static:1.2.4&#39;</span><br><span class="line">   &#x2F;&#x2F; 拼音</span><br><span class="line">   implementation &#39;com.github.promeg:tinypinyin:2.0.3&#39;</span><br><span class="line">   &#x2F;&#x2F; 权限</span><br><span class="line">   implementation &#39;com.hjq:xxpermissions:9.2&#39;</span><br></pre></td></tr></table></figure>
+
+<h2 id="模块依赖"><a href="#模块依赖" class="headerlink" title="模块依赖"></a>模块依赖</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; framework</span><br><span class="line">implementation &quot;com.ms:android-module-framework:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; common 模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-common:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; data</span><br><span class="line">implementation &quot;com.ms:android-module-impl-data:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; app-data</span><br><span class="line">implementation &quot;com.ms:android-module-impl-data-app:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; mmkv</span><br><span class="line">implementation &quot;com.ms:android-module-impl-mmkv:latest-release&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 开关控制模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-controllswitch:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 轻量级数据存储模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-datapersistence:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 异常处理模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-exception:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 日志模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-log:latest-release&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; okhttp 和 httpurlconnection 只能选择一个</span><br><span class="line">&#x2F;&#x2F;implementation &quot;com.ms:android-module-impl-request-httpurlconnection:latest-release&quot;</span><br><span class="line">implementation &quot;com.ms:android-module-impl-request-okhttp:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 网络请求配置模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-request-config:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 工具类模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; apk 工具类模块</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-apk:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; okhttp 工具类</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-okhttp:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 反射获取资源</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-resource:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 文件</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-file:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 打开</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-openfile:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 图片</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-photo:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 分享</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-share:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 媒体</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-mediaplayer:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; toast</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-toast:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 线程池</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-thread-pool:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 系统</span><br><span class="line">implementation &quot;com.ms:android-module-impl-utils-system:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 权限</span><br><span class="line">implementation &quot;com.ms:android-module-impl-permission:latest-release&quot;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 微信清理配置模块</span><br><span class="line">implementation &quot;com.ms:android-module-wechat-clean-config:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 微信清理模块</span><br><span class="line">implementation &quot;com.ms:android-module-wechat-clean:latest-release&quot;</span><br><span class="line">&#x2F;&#x2F; 微信语音编码</span><br><span class="line">implementation &quot;com.ms:android-module-wechat-voice-codec:latest-release&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="模块入口"><a href="#模块入口" class="headerlink" title="模块入口"></a>模块入口</h2><h3 id="客户端类"><a href="#客户端类" class="headerlink" title="客户端类"></a>客户端类</h3><p> Modules</p>
+<h3 id="获取模块"><a href="#获取模块" class="headerlink" title="获取模块"></a>获取模块</h3><h4 id="开关控制模块"><a href="#开关控制模块" class="headerlink" title="开关控制模块"></a>开关控制模块</h4><p>Modules.getControlSwitch();</p>
+<h4 id="日志模块"><a href="#日志模块" class="headerlink" title="日志模块"></a>日志模块</h4><p>getLogModule<br>// 设置日志是否输出<br>Modules.getControlSwitch().setLogOut(true);</p>
+<h4 id="api-模块"><a href="#api-模块" class="headerlink" title="api 模块"></a>api 模块</h4><p>getApiModule</p>
+<h4 id="工具类模块"><a href="#工具类模块" class="headerlink" title="工具类模块"></a>工具类模块</h4><p>getUtilsModule</p>
+<h4 id="数据模块"><a href="#数据模块" class="headerlink" title="数据模块"></a>数据模块</h4><p>getDataModule</p>
+<h4 id="权限申请模块"><a href="#权限申请模块" class="headerlink" title="权限申请模块"></a>权限申请模块</h4><p>getPermissionModule</p>
+<h4 id="网络请求模块"><a href="#网络请求模块" class="headerlink" title="网络请求模块"></a>网络请求模块</h4><p>getRequestModule</p>
+<h4 id="异常处理模块"><a href="#异常处理模块" class="headerlink" title="异常处理模块"></a>异常处理模块</h4><p>getExceptionModule</p>
+<h4 id="mmkv"><a href="#mmkv" class="headerlink" title="mmkv"></a>mmkv</h4><p>getMmkvModule</p>
+<h4 id="sp"><a href="#sp" class="headerlink" title="sp"></a>sp</h4><p>getDataPersistenceModule</p>
+<h4 id="common"><a href="#common" class="headerlink" title="common"></a>common</h4><p>getCommonModule</p>
+<h4 id="网络请求配置模块"><a href="#网络请求配置模块" class="headerlink" title="网络请求配置模块"></a>网络请求配置模块</h4><p>getRequestConfigModule</p>
+<h4 id="阿里云日志"><a href="#阿里云日志" class="headerlink" title="阿里云日志"></a>阿里云日志</h4><p>getAliyuLogModule</p>
+<h4 id="阿里云sts"><a href="#阿里云sts" class="headerlink" title="阿里云sts"></a>阿里云sts</h4><p>getAliyunSTSModule</p>
+<h4 id="腾讯bugly"><a href="#腾讯bugly" class="headerlink" title="腾讯bugly"></a>腾讯bugly</h4><p>getTencentBuglyModule</p>
+<h4 id="三方登录"><a href="#三方登录" class="headerlink" title="三方登录"></a>三方登录</h4><p>getLogin3Module</p>
+<h4 id="三方支付"><a href="#三方支付" class="headerlink" title="三方支付"></a>三方支付</h4><p>getPay3Module</p>
+<h4 id="微信清理模块"><a href="#微信清理模块" class="headerlink" title="微信清理模块"></a>微信清理模块</h4><p>getWeChatCleanModule</p>
+<h2 id="开关控制模块-1"><a href="#开关控制模块-1" class="headerlink" title="开关控制模块"></a>开关控制模块</h2><p>setLogOut<br>getLogOut<br>setAliyunLogSend<br>getAliyunLogSend<br>setPrintStackTrace<br>getPrintStackTrace<br>setTencentBugly<br>getTencentBugly</p>
+<h2 id="日志模块-1"><a href="#日志模块-1" class="headerlink" title="日志模块"></a>日志模块</h2><p>print<br>println<br>i<br>d<br>e<br>xml<br>json</p>
+<h2 id="api-模块-1"><a href="#api-模块-1" class="headerlink" title="api 模块"></a>api 模块</h2><p>setStrategy<br>onSwitch<br>setBaseUrls<br>getBaseUrls<br>setCdnUrls<br>getCdnUrls<br>getBaseUrl<br>getCdnUrl</p>
+<h2 id="工具类模块-1"><a href="#工具类模块-1" class="headerlink" title="工具类模块"></a>工具类模块</h2><p>getApkUtils<br>getToastUtils<br>getEncryptionUtils<br>getThreadPoolUtils<br>getGsonUtils<br>getNetWorkUtils<br>getRegexUtils<br>getResUtils<br>getSystemUtils<br>getPinyinUtils<br>getAndroidOpenFileUtils<br>getAndroidShareFileUtils<br>getByteSizeToStringUnitUtils<br>getAndroidPhotoAlbumUtils<br>getFileUtils<br>getMediaPlayerUtils</p>
+<h3 id="ApkUtils"><a href="#ApkUtils" class="headerlink" title="ApkUtils"></a>ApkUtils</h3><p>getAppName<br>getVersionCode<br>getVersionName<br>isPackageInstalled<br>getMeta<br>isDebug<br>getPackageName</p>
+<h3 id="ToastUtils"><a href="#ToastUtils" class="headerlink" title="ToastUtils"></a>ToastUtils</h3><p>show</p>
+<h3 id="EncryptionUtils"><a href="#EncryptionUtils" class="headerlink" title="EncryptionUtils"></a>EncryptionUtils</h3><p>getStringUtils<br>getMD5Utils<br>getRsaUtils<br>getSHAUtils</p>
+<h3 id="ThreadPoolUtils"><a href="#ThreadPoolUtils" class="headerlink" title="ThreadPoolUtils"></a>ThreadPoolUtils</h3><p>runOnMainThread<br>runSubThread<br>kill</p>
+<h3 id="GsonUtils"><a href="#GsonUtils" class="headerlink" title="GsonUtils"></a>GsonUtils</h3><p>toJson<br>fromJson<br>fromJson</p>
+<h3 id="NetWorkUtils"><a href="#NetWorkUtils" class="headerlink" title="NetWorkUtils"></a>NetWorkUtils</h3><p>openWirelessSettings<br>getActiveNetworkInfo<br>isAvailable<br>isConnected<br>is4G<br>isWifiConnected<br>getNetworkOperatorName<br>getPhoneType<br>getNetWorkType<br>getNetWorkTypeName</p>
+<h3 id="RegexUtils"><a href="#RegexUtils" class="headerlink" title="RegexUtils"></a>RegexUtils</h3><p>isMobileSimple<br>isMobileExact<br>isTel<br>isIDCard15<br>isIDCard18<br>isEmail<br>isURL<br>isZh<br>isUsername<br>isDate<br>isIP<br>isMatch<br>getMatches<br>getSplits<br>getReplaceFirst<br>getReplaceAll<br>isContainChinese<br>isStartWithNumber<br>isContainsStr</p>
+<h3 id="ResUtils"><a href="#ResUtils" class="headerlink" title="ResUtils"></a>ResUtils</h3><p>getLayoutId<br>getStringId<br>getDrawableId<br>getStyleId<br>getId<br>getColorId<br>getArrayId<br>getString</p>
+<h3 id="SystemUtils"><a href="#SystemUtils" class="headerlink" title="SystemUtils"></a>SystemUtils</h3><p>isMobilePhone<br>getIp<br>getImei<br>getAndroidId<br>getMac<br>getIpV6<br>getAppList<br>getRunningProcess<br>getCpuName<br>printResolution<br>getCpuAbi<br>getProduct<br>getOsType<br>getOSVersion<br>getBrand<br>getSSID<br>getCurrentLanguage<br>getCurrentTimeZone<br>getProcessName</p>
+<h3 id="PinyinUtils"><a href="#PinyinUtils" class="headerlink" title="PinyinUtils"></a>PinyinUtils</h3><p>hanZi2Pinyin</p>
+<h3 id="AndroidOpenFileUtils"><a href="#AndroidOpenFileUtils" class="headerlink" title="AndroidOpenFileUtils"></a>AndroidOpenFileUtils</h3><p>openFileByPath</p>
+<h3 id="AndroidShareFileUtils"><a href="#AndroidShareFileUtils" class="headerlink" title="AndroidShareFileUtils"></a>AndroidShareFileUtils</h3><p>shareFile<br>shareFile<br>shareFiles</p>
+<h3 id="ByteSizeToStringUnitUtils"><a href="#ByteSizeToStringUnitUtils" class="headerlink" title="ByteSizeToStringUnitUtils"></a>ByteSizeToStringUnitUtils</h3><p>byteToStringUnit<br>byteToStringUnitS</p>
+<h3 id="AndroidPhotoAlbumUtils"><a href="#AndroidPhotoAlbumUtils" class="headerlink" title="AndroidPhotoAlbumUtils"></a>AndroidPhotoAlbumUtils</h3><p>openFileByPath</p>
+<h3 id="FileUtils"><a href="#FileUtils" class="headerlink" title="FileUtils"></a>FileUtils</h3><p>copyFile<br>copyFile<br>deleteFile<br>deleteFile<br>deletes<br>searchToStrings<br>deleteDirectory<br>deleteDirectory<br>deleteDirectory<br>searchToFiles<br>searchToStrings<br>searchToFiles<br>fileLengnth<br>fileLengnths<br>fileLengnth<br>lastModified<br>lastModified<br>readFileToString</p>
+<h3 id="MediaPlayerUtils"><a href="#MediaPlayerUtils" class="headerlink" title="MediaPlayerUtils"></a>MediaPlayerUtils</h3><p>get<br>play<br>stop</p>
+<h2 id="数据模块-1"><a href="#数据模块-1" class="headerlink" title="数据模块"></a>数据模块</h2><p>getAppData<br>getUserData<br>getMatrixData<br>getAliyunSTSData<br>getAdData<br>getIntegralData<br>getMtaData</p>
+<h3 id="AppData"><a href="#AppData" class="headerlink" title="AppData"></a>AppData</h3><p>setApplication<br>getApplication<br>setAppVersion<br>getAppVersion<br>setAppId<br>getAppId<br>setAppSecret<br>getAppSecret<br>setUtdid<br>getUtdid<br>setIp<br>getIp</p>
+<h3 id="UserData"><a href="#UserData" class="headerlink" title="UserData"></a>UserData</h3><p>setUsername<br>getUsername<br>setPassword<br>getPassword<br>setUserId<br>getUserId<br>setAccessToken<br>getAccessToken<br>getRefreshToken<br>setRefreshToken<br>getRole<br>setRole<br>clearAll</p>
+<h3 id="AdData"><a href="#AdData" class="headerlink" title="AdData"></a>AdData</h3><h3 id="IntegralData"><a href="#IntegralData" class="headerlink" title="IntegralData"></a>IntegralData</h3><h3 id="MtaData"><a href="#MtaData" class="headerlink" title="MtaData"></a>MtaData</h3><h2 id="权限申请模块-1"><a href="#权限申请模块-1" class="headerlink" title="权限申请模块"></a>权限申请模块</h2><p>request</p>
+<h2 id="网络请求模块-1"><a href="#网络请求模块-1" class="headerlink" title="网络请求模块"></a>网络请求模块</h2><p>get<br>get<br>post<br>post<br>requestBody<br>requestBody<br>downloadImage<br>downloadImage</p>
+<h2 id="异常处理模块-1"><a href="#异常处理模块-1" class="headerlink" title="异常处理模块"></a>异常处理模块</h2><p>handlerInit<br>printStackTrace</p>
+<h2 id="mmkv-1"><a href="#mmkv-1" class="headerlink" title="mmkv"></a>mmkv</h2><p>put<br>get<br>removeKey</p>
+<h2 id="sp-1"><a href="#sp-1" class="headerlink" title="sp"></a>sp</h2><p>getInstance<br>put<br>get<br>removeKey</p>
+<h2 id="common-1"><a href="#common-1" class="headerlink" title="common"></a>common</h2><p>init</p>
+<h2 id="网络请求配置模块-1"><a href="#网络请求配置模块-1" class="headerlink" title="网络请求配置模块"></a>网络请求配置模块</h2><p>setConnectTimeout<br>getConnectTimeout<br>setReadTimeout<br>getReadTimeout<br>setWriteTimeout<br>getWriteTimeout<br>setRequestLogOut<br>getRequestLogOut</p>
+<h2 id="阿里云日志-1"><a href="#阿里云日志-1" class="headerlink" title="阿里云日志"></a>阿里云日志</h2><p>setEndpoint<br>getEndpoint<br>setProject<br>getProject<br>setLogStore<br>getLogStore<br>send<br>log<br>log</p>
+<h2 id="阿里云sts-1"><a href="#阿里云sts-1" class="headerlink" title="阿里云sts"></a>阿里云sts</h2><p>init</p>
+<h2 id="腾讯bugly-1"><a href="#腾讯bugly-1" class="headerlink" title="腾讯bugly"></a>腾讯bugly</h2><p>init</p>
+<h2 id="三方登录-1"><a href="#三方登录-1" class="headerlink" title="三方登录"></a>三方登录</h2><p>qq<br>wechat<br>alipay</p>
+<h2 id="三方支付-1"><a href="#三方支付-1" class="headerlink" title="三方支付"></a>三方支付</h2><p>wechat<br>ali</p>
+<h2 id="微信清理模块-1"><a href="#微信清理模块-1" class="headerlink" title="微信清理模块"></a>微信清理模块</h2><p>getWeChatCleanCore<br>getWeChatCleanConfig<br>start</p>
+
+      
+       
+    </div>
+</article>
+
+
+
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">
+    ©2020
+</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.1.0" ></script>
+
+<script src="/js/script.js?v=1.1.0" ></script>
+<script>
+    var img_resize = 'default';
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $("#post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
